@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/static/css/briefing.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="/static/js/briefing.js"></script>
+</head>
+<body>
+ 
+<div class="header">
+    <img src="/static/img/logo.png" width="128px" height="128px"/>
+    <br />
+    <select>
+        <option>Youtube</option>
+        <option>Google</option>
+        <option>DuckDuckGo</option>
+    </select>
+    <input type="text" name="q" value="" placeholder="Search...">
+</div>
+<div class="columns">
+    {% for column in widgets %}
+    <div class="column">
+        {% for widget in column %}
+            {% with template_name=widget.template %}
+                {% include ""|add:template_name with widget=widget %}
+            {% endwith %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,4 @@
+Django==4.1.3
+feedparser==6.0.10
+filecache==0.81
+mysqlclient==2.1.1

@@ -1,0 +1,11 @@
+<div class="portlet" data-feed="{{ widget.feed }}" data-title="{{ widget.title }}" data-template="{{ widget.template }}">
+    <div class="portlet-header">{{ widget.title }} ({{ widget.count }}) Last Update: {{ widget.last_scan }}</div>
+    <div class="portlet-content">
+        {% for item in widget.entries %}
+        <details>
+            <summary><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></summary>
+            {{item.description|safe}}
+        </details>
+        {% endfor %}
+    </div>
+</div>

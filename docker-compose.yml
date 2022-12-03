@@ -1,0 +1,24 @@
+version: '3'
+services:
+  briefing_db:
+    image: mariadb:latest
+    restart: on-failure
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=briefing
+      - MYSQL_USER=b_user
+      - MYSQL_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=
+    volumes:
+      - ./db:/var/lib/mysql
+  briefing_web:
+    build: ./project
+    restart: on-failure
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./project:/app
+    depends_on:
+      - briefing_db
