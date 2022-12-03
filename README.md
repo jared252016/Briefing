@@ -1,0 +1,2 @@
+# Briefing
+An iGoogle alternative
