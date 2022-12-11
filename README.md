@@ -61,7 +61,7 @@ docker-compose up
 
 I'm ommitting the "-d" to daemonize it so that we can see the log output for now. Go ahead and make a new console/terminal and run the following:
 ```
-docker exec -it briefing_web_1 /bin/sh
+sudo docker exec -it briefing_web_1 /bin/sh
 ```
 This will launch a terminal inside of the Django Docker container. Next we need to create the database schema and then create a super user for the admin. To create the database schema, in the /app folder run:
 
