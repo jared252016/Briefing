@@ -56,7 +56,7 @@ Look for what you see above and enter the user, password, and host. The host is 
 Once the config files are modified you can go ahead and start the application using docker-compose. There are some additional steps to configure the database though once the project is started, but for now just run the following in the folder where the docker-compose.yml file is located.
 
 ```
-docker-compose up
+sudo docker-compose up
 ```
 
 I'm ommitting the "-d" to daemonize it so that we can see the log output for now. Go ahead and make a new console/terminal and run the following:
