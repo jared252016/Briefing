@@ -1,3 +1,5 @@
+![Briefing RSS Dashboard](https://raw.githubusercontent.com/jared252016/Briefing/master/image.png)
+
 # Briefing
 An iGoogle alternative that supports caching of RSS feeds with hourly updates.
 
