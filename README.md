@@ -12,8 +12,10 @@ I do not have a copy in the Docker Hub yet, so you will need to build it locally
 
 ### Git Pull
 First create a directory to pull the project into. I will be using "briefing". I recommend putting this somewhere else besides the home directory, like in /srv, but it's up to you. After you create the directory, execute the pull on this repository.
-`mkdir ~/briefing/
-git pull https://github.com/jared252016/Briefing.git`
+```
+mkdir ~/briefing/
+git pull https://github.com/jared252016/Briefing.git
+```
 
 ## Database Connection
 
