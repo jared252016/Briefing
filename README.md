@@ -19,6 +19,23 @@ mkdir ~/briefing/
 git pull https://github.com/jared252016/Briefing.git
 ```
 
+## Prerequisites 
+
+### Docker
+This project requires that you use Docker and should work on any linux distribution (or Windows via Subsystem)
+
+To install Docker on Debian/Ubuntu, run the following:
+```
+sudo apt install docker.io
+```
+
+### Docker-Compose
+You will also need docker-compose. Docker compose is a tool that allows you to script the deployment of Docker containers. To install it, run:
+
+```
+sudo apt install docker-compose
+```
+
 ## Database Connection
 
 ### Docker Compose
@@ -55,6 +72,12 @@ DATABASES = {
 Look for what you see above and enter the user, password, and host. The host is "briefing_db" because the docker-compose.yml file calls that container briefing_db and it utilizes Docker's dns. You can either use "root" for the user and the root password, or the user/pass you set above.
 
 ## First run
+
+### Building With Docker Compose
+First you will need to build the Docker image. To do this, run:
+```
+sudo docker-compose build
+```
 
 ### Starting With Docker Compose
 Once the config files are modified you can go ahead and start the application using docker-compose. There are some additional steps to configure the database though once the project is started, but for now just run the following in the folder where the docker-compose.yml file is located.
