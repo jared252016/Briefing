@@ -74,7 +74,7 @@ Look for what you see above and enter the user, password, and host. The host is 
 ## First run
 
 ### Building With Docker Compose
-First you will need to build the Docker image. To do this, run:
+First you will need to build the Docker image. To do this, navigate to the folder where the docker-compose.yml file is and run:
 ```
 sudo docker-compose build
 ```
